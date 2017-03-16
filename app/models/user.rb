@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :departments
+  belongs_to :department
   has_many :summary_users
   has_many :summaries, through: :summary_users
 end

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Establishment:</strong>
-  <%= @department.establishment %>
+  <%= @department.establishment.name+ ", "+ @department.establishment.city %>
 </p>
 
 <%= link_to 'Edit', edit_department_path(@department) %> |

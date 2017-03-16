@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :Nombre %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :establishment_id %>
-    <%= f.text_field :establishment_id %>
+    <%= f.label :Establecimiento %>
+    <%= f.select :establishment_id, Establishment.all.map{|e| [e.name + ", " + e.city, e.id]}%>
   </div>
 
   <div class="actions">
